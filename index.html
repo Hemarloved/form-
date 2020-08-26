@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Transparent login form</title>
+        <link href="Resources/images/style.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"/>
+       
+    </head>
+    <body>
+        <div class= "all">
+            <div class="first">
+            <form id="form" method="POST" action="/login">
+                <h1>Login</h1>
+                <div class="form-control">
+                    <input id="username" type="text" placeholder="Username">
+                    <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-exclamation-circle"></i>
+                    <small>Error message</small>
+                </div>
+
+                <div class="form-control">
+                    <input id="mail" type="email" placeholder="you@example.com">
+                    <i class="fa fa-check-circle"></i>
+                    <i class="fa fa-exclamation-circle"></i>
+                    <small>Error message</small>
+                </div>
+
+                <div class="form-control">
+                    <input id="lock" class="seek" type="password" placeholder="password">
+                    <i class="fa fa-check-circle"></i>
+                    <i class="fa fa-exclamation-circle"></i>
+                    <small>Error message</small>
+                </div>
+                <div class="form-control">
+                    <input id="lock2" type="password" placeholder="confirm password">
+                    <i class="fa fa-check-circle"></i>
+                    <i class="fa fa-exclamation-circle"></i>
+                    <small>Error message</small>
+                </div>
+                <div class="last">
+                    <input type="checkbox" class="check" id="showPwd">
+                    <label for="showPwd">Show Password</label>
+                </div>
+                <button>Submit</button>
+         
+            </form>
+            </div> 
+        </div> 
+        <script src="script.js"></script>
+    </body>
+</html>

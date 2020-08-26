@@ -1,0 +1,145 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin:0;
+    padding:0;
+    font: Helvetica;
+    color:white;
+    width: 100%;
+    height: 100vh;
+    background:url('paris with love.jpg') no-repeat;
+    background-position: cover;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+
+}
+
+ .all{
+     width:350px;
+     position: absolute; 
+     display: inline-block;
+     min-height: 100vh;
+     padding: 20px;
+        
+ }
+ h1{
+    display: inline-block;
+    margin-left: 80px;
+    border-bottom: 2px solid #cc2bc4;
+}
+
+.form-control.success input{
+    border-color: #44cc2b;
+    
+}
+
+.form-control.error input{
+ border-color:#e74c3c;
+ 
+}
+
+ .form-control{
+     margin-bottom: 10px;
+     padding-bottom: 20px;
+     position: relative;
+     margin-top: 20px;
+     margin-left: 30px;
+ }
+ 
+ .form-control i{
+    color: #44cc2b;
+    position: absolute;
+    top: 15px;
+    right: 10px;
+    visibility: hidden;
+
+}
+.first input{
+    border: none;
+    outline:none;
+    background: none;
+    color:pink;
+    font-size: 18px;
+    border-bottom: 1px solid #cc2bc4;
+    padding: 10px;
+    width: 350px;
+    display: block;
+    position: relative;
+}
+.form-control.success i.fa-check-circle{
+    visibility: visible;
+    color: #2ecc71;
+}
+
+.form-control.error i.fa-exclamation-circle{
+    visibility: visible;
+    color: #e74c3c;
+}
+
+.form-control small{
+    visibility: hidden;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.form-control.error small{
+    visibility: visible;
+    color: #e74c3c;
+}
+
+ small{
+     display: block;
+ }
+ 
+ .first, .last{
+    padding: 10px;
+  }
+  .last input{
+      position: absolute;
+  }
+
+  .last label{
+    margin:20px;
+
+}
+    #shwPwd{
+    margin: 0px;
+}
+
+
+   button{
+
+       margin-top: 30px;
+       margin-left: 50px;
+       background:black;
+       color: white;
+       width: 100%;
+       height: 40px;
+       border: 2px solid #cc2bc4;
+       border-radius: 10px;
+       font-size: 20px;
+       cursor: pointer;  
+   }
+  
+.yea input{
+    margin:10px;    
+
+}
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: rgb(160, 189, 175);
+    opacity: 1; /* Firefox */
+  }
+
+
+@media screen and (max-width:600px){
+    
+    .form-control{
+        justify-items: center;
+        align-items: center;
+    
+    }
+}
+ 
+  
+  
