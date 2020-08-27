@@ -51,7 +51,7 @@ body{
     color: #44cc2b;
     position: absolute;
     top: 15px;
-    right: 10px;
+    right: -60px;
     visibility: hidden;
 
 }
@@ -66,6 +66,12 @@ body{
     width: 350px;
     display: block;
     position: relative;
+}
+h1.sucess{
+    color: #2ecc71;
+}
+.button .success{
+    color: #2ecc71;
 }
 .form-control.success i.fa-check-circle{
     visibility: visible;
