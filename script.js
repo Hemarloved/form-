@@ -30,7 +30,7 @@ function checkInputs() {
         //show error
         //add error class
         setErrorfor(username, 'Username cannot be empty');
-    }else if(usernameValue < minLength){
+    }else if(usernameValue.length < 5){
         setErrorfor(username, 'Username should be at least 5 characters');
     } else {
         // add success class
@@ -48,7 +48,7 @@ function checkInputs() {
 
     if(passwordValue === '' ){
         setErrorfor(lock, 'Put in a password');
-    }else if(passwordValue < minLength){
+    }else if(passwordValue.length < 8){
         setErrorfor(lock, 'Password should be at least 8 characters')
     }else {
         setSuccessfor(lock);
@@ -65,20 +65,20 @@ function checkInputs() {
     //show a pop up sucess message
 }
 function minLength(){
-    const minUser = username.value.length;
-    const minpwd = lock.value.length;
+    const minUser = document.getElementById('username').value;
+    const minpwd = document.getElementById('lock').value;
     const smallMsg = formControl.querySelector('small');
       
-    if(minUser < 5){
+    if(minUser.length < 5){
         smallMsg.innerText = message;
     }else{
         smallMsg ='';
     };
 
-    if (minpwd < 8){
+    if (minpwd.length < 8){
         smallMsg.innerText = message;
     }else{
-        smallMsg = '';
+        smallMsg = '';dfghj
     }
 
 };
