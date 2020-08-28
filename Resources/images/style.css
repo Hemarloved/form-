@@ -5,23 +5,26 @@ body{
     margin:0;
     padding:0;
     font: Helvetica;
-    color:white;
+    color: white;
+   
+}
+.main-div{
+    position: relative;
     width: 100%;
     height: 100vh;
-    background:url('paris with love.jpg') no-repeat;
-    background-position: cover;
+    background:url('paris with love.jpg');
+    background-repeat:no-repeat;
+    background-position: center;
     background-size: 100% 100%;
     background-repeat: no-repeat;
+    
 
 }
 
  .all{
      width:350px;
-     position: absolute; 
-     display: inline-block;
-     min-height: 100vh;
-     padding: 20px;
-        
+    position: relative;
+     padding: 20px;      
  }
  h1{
     display: inline-block;
@@ -139,11 +142,26 @@ h1.sucess{
 
 
 @media screen and (max-width:600px){
-    
+    .main-div{
+    height: 100vh;
+    }
+    .first{
+        margin-top: 20px;
+    }
+    .all{
+        
+       position: relative;
+       margin-left: -30px;  
+              
+    }
+    input{
+        width: 300px;
+    }
+}
+
+@media screen and (max-width:370px){
     .form-control{
-        justify-items: center;
-        align-items: center;
-    
+        margin-left: 5px;   
     }
 }
  
