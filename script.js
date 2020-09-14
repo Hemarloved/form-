@@ -3,85 +3,109 @@ const username = document.getElementById('username');
 const mail = document.getElementById('mail'); //get username input
 const password = document.getElementById('lock');
 const password2 = document.getElementById('lock2');
+const usernameValue = username.value.trim();
+const mailValue = mail.value.trim();
+const passwordValue = password.value.trim();
+const password2Value = password2.value.trim();
+var uminLength = 5;
+var nmsg = 'welcome ' + usernameValue;
 
 
 
 
 
 
+form.addEventListener('submit', checkUsername,false);
+form.addEventListener('submit', checkMail,false);
+form.addEventListener('submit', checkPassword,false);
+form.addEventListener('submit', checkPassword2,false);
 
 
-form.addEventListener('submit', (e) => {
-    e.preventDefault();
+username.addEventListener('blur', checkUsername, false);
+mail.addEventListener('blur', checkMail, false);
+password.addEventListener('blur', checkPassword, false);
+password2.addEventListener('blur', checkPassword2, false);
+/*
 
-    checkInputs();
-});
+(function (){
+    var form = document.getElementById('form');
 
+    login.addEventListener('submit', main, function(e){
+        e.preventDefault();
+        var elements = this.elements;
+        var username = elements.username.value;
+        var msg = 'Welcome ' + username;
+        document.getElementById('main').textContent = msg;
+    });
+    
+}());
 
-function checkInputs() {
+*/
+
     //get the values from the input
-    const usernameValue = username.value.trim();
-    const mailValue = mail.value.trim();
-    const passwordValue = password.value.trim();
-    const password2Value = password2.value.trim();
     
 
-    if(usernameValue === ''){
+    function checkUsername(e){
+        const usernameValue = username.value.trim();
         //show error
         //add error class
+        
+        if(usernameValue.value === ''){
+            e.preventDefault();
         setErrorfor(username, 'Username cannot be empty');
-    }else if(usernameValue.length < 5){
+    }else if(usernameValue.length < uminLength){
         setErrorfor(username, 'Username should be at least 5 characters');
     } else {
         // add success class
         setSuccessfor(username);
-    };
+    }
+    }
     
-    
-    if (mailValue === ''){
+    function checkMail(e){
+        e.preventDefault();
+    if (mail.value === ''){
+        e.preventDefault();
         setErrorfor(mail, ' email cannot be empty');
-  //  } //else if(!isEmail(mailValue)){
-        //setErrorfor(mail, 'Email is not valid');
+   //} else if(!isEmail(mail)){
+       // setErrorfor(mail, 'Email is not valid');
     } else{
         setSuccessfor(mail);
+    }
     };
 
-    if(passwordValue === '' ){
+
+    function checkPassword(e){
+        
+    if(lock.value === '' ){
+        e.preventDefault();
         setErrorfor(lock, 'Put in a password');
-    }else if(passwordValue.length < 8){
+    }else if(lock.value.length < 8){
         setErrorfor(lock, 'Password should be at least 8 characters')
     }else {
         setSuccessfor(lock);
+    }
     };
 
-    if(password2Value === ''){
+    function checkPassword2(e){
+        
+    if(lock2.value === ''){
+        e.preventDefault();
       setErrorfor(lock2, 'Password cannot be blank');
-    } else if (passwordValue !== password2Value){
+    } else if (lock.value !== lock){
         setErrorfor(lock2, 'Passwords does not match')
     }else{
         setSuccessfor(lock2);
     }
-
-    //show a pop up sucess message
-}
-function minLength(){
-    const minUser = document.getElementById('username').value;
-    const minpwd = document.getElementById('lock').value;
-    const smallMsg = formControl.querySelector('small');
-      
-    if(minUser.length < 5){
-        smallMsg.innerText = message;
-    }else{
-        smallMsg ='';
     };
 
-    if (minpwd.length < 8){
-        smallMsg.innerText = message;
-    }else{
-        smallMsg = '';dfghj
-    }
 
-};
+    //show a pop up sucess message
+//    document.getElementById('msg').textContent = nmsg 
+
+function myFunction(){
+    alert('we re going to be just fine');
+}
+
     
 
 function setErrorfor(input, message){

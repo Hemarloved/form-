@@ -21,6 +21,12 @@ body{
 
 }
 
+#main{
+    color: yellow;
+    font: size 18px;
+    position: absolute;
+    top: 50%;
+}
  .all{
      width:350px;
     position: relative;
