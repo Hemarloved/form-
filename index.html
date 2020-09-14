@@ -13,7 +13,7 @@
 
             <div class= "all">
                 <div class="first">
-                <form id="form" method="POST" action="/login">
+                <form method="post" action="form.html" onsubmit="return validate()" name="form">
                     <h1>Login</h1>
                     <div class="form-control">
                         <input id="username" type="text" placeholder="Username">
@@ -45,8 +45,8 @@
                         <input type="checkbox" class="check" id="showPwd">
                         <label for="showPwd">Show Password</label>
                     </div>
-                    <button>Submit</button>
-             
+                    <button id="login" name="register">Submit</button> 
+                    <div id="main"></div>         
                 </form>
                 </div> 
             </div>
@@ -54,6 +54,6 @@
 
         </div>
          
-        <script src="script.js"></script>
+        <script src="app.js"></script>
     </body>
 </html>
